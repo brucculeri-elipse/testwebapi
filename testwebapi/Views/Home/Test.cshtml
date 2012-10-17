@@ -1,0 +1,86 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Test chiamate ajax</h1>
+                <h2>Operazioni CRUD</h2>
+            </hgroup>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <ol class="round">
+            <li class="one">
+                <h5>GetAll</h5>
+                <button onclick="GetAllTodos();">Invoke</button>
+                <br />
+                <div id="divGetAllTodos"></div>
+            </li>
+
+            <li class="two">
+                <h5>Get</h5>
+                Id: <input type="text" id="txtGetTodo" /><br />
+                <button onclick="GetTodo($('#txtGetTodo').val());">Invoke</button>
+                <br />
+                <div id="divGetTodo"></div>
+            </li>
+
+            <li class="three">
+                <h5>GetDoneTodos</h5>
+                <button onclick="GetDoneTodos();">Invoke</button>
+                <br />
+                <div id="divGetDoneTodos"></div>
+            </li>
+
+            <li class="four">
+                <h5>GetTodosByStatus</h5>
+                Fatto: <input type="checkbox" id="chkStatus" /><br />
+                <button onclick="GetTodosByStatus($('#chkStatus').is(':checked') ? 'true' : 'false');">Invoke</button>
+                <br />
+                <div id="divGetTodosByStatus"></div>
+            </li>
+
+            <li class="five">
+                <h5>Post</h5>
+                Descrizione: <input type="text" id="txtPostDescription" /><br />
+                Fatto: <input type="checkbox" id="chkPostDone" /><br />
+                <button onclick="PostTodo($('#txtPostDescription').val(), $('#chkPostDone').is(':checked') ? 'true' : 'false');">Invoke</button>
+                <br />
+                <div id="divPostTodo"></div>
+            </li>
+
+            <li class="six">
+                <h5>Put</h5>
+                Id: <input type="text" id="txtPutId" /><br />
+                Descrizione: <input type="text" id="txtPutDescription" /><br />
+                Fatto: <input type="checkbox" id="chkPutDone" /><br />
+                <button onclick="PutTodo($('#txtPutId').val(), $('#txtPutDescription').val(), $('#chkPutDone').is(':checked') ? 'true' : 'false');">Invoke</button>
+                <br />
+                <div id="divPutTodo"></div>
+            </li>
+
+            <li class="seven">
+                <h5>Delete</h5>
+                Id: <input type="text" id="txtDeleteId" /><br />
+                <button onclick="DeleteTodo($('#txtDeleteId').val());">Invoke</button>
+                <br />
+                <div id="divDeleteTodo"></div>
+            </li>
+
+            <li class="eight">
+                <h5>Close Todo</h5>
+                Id: <input type="text" id="txtCloseId" /><br />
+                <button onclick="CloseTodo($('#txtCloseId').val());">Invoke</button>
+                <br />
+                <div id="divCloseTodo"></div>
+            </li>
+        </ol>
+    </section>
+</div>
